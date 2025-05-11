@@ -45,9 +45,12 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
           <NavLink to="/popular">Popular <span className="emoji">&#x1F525;</span></NavLink>
           <NavLink to="/upcoming">Upcoming <span className="emoji">&#x1F389;</span></NavLink>
           <NavLink to="/top-rated">Top Rated <span className="emoji">&#x2B50;</span></NavLink>
-          <button className="theme-toggle-btn" onClick={toggleTheme}>
-            {isDarkMode ? <WbSunnyIcon /> : <Brightness2Icon />}
-          </button>
+
+          {/* Toggle Button */}
+          <label className="switch">
+            <input type="checkbox" checked={isDarkMode} onChange={toggleTheme} />
+            <span className="slider"></span>
+          </label>
         </div>
 
         <div className="mobile-menu-icon" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
