@@ -85,3 +85,54 @@
     color: var(--text-color);
   }
   
+  /* Responsive styles */
+.desktop-only {
+  display: flex;
+}
+
+.mobile-menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+  }
+
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    gap: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .mobile-menu a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .mobile-filter-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .mobile-filter-controls select {
+    padding: 6px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+}
